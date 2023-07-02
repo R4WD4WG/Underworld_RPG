@@ -172,3 +172,133 @@ class Player:
     
 # Player End---------------------------------------------------------------------------------        
 
+
+
+# Enemies------------------------------------------------------------------------------------
+
+
+# Thug
+class Thug:
+    def __init__(self):
+        self.str = 1 # strength multiplier
+        self.df = 1 # defense multiplier
+        self.speed = 1 # speed multiplier
+
+
+# Bum
+class Bum:
+    def __init__(self):
+        self.str = 1 # strength multiplier
+        self.df = 1 # defense multiplier
+        self.speed = 1 # speed multiplier
+
+
+# Rat
+class Rat:
+    def __init__(self):
+        self.str = 0.5 # strength multiplier
+        self.df = 0.5 # defense multiplier
+        self.speed = 1.5 # speed multiplier
+
+
+# Crackhead
+class Crackhead:
+    def __init__(self):
+        self.str = 0.75 # strength multipler
+        self.df = 0.6 # defense multiplier
+        self.speed = 2.25 # speed multiplier
+
+
+# Magikarp
+class Magikarp:
+    def __init__(self):
+        self.str = 0 # strength multipler
+        self.df = 1 # defense multiplier
+        self.speed = 1 # speed multiplier
+
+    
+# DMT Entities
+class DMT_Entities:
+    def __init__(self):
+        self.str = 0 # strength multipler
+        self.df = 1 # defense multiplier
+        self.speed = 1 # speed multiplier
+        self.smarts = 1 # smarts multiplier
+
+
+# Hacker
+class Hacker:
+    def __init__(self):
+        self.str = 0.5 # strength multiplier
+        self.df = 0.8 # defense multiplier
+        self.speed = 1 # speed multiplier
+        self.smarts = 1.75
+
+
+# Scientist
+class Scientist:
+    def __init__(self):
+        self.str = 0.5
+        self.df = 0.9
+        self.speed = 1.1
+        self.smarts = 2
+
+
+# Old Man
+class Old_Man:
+    def __init__(self):
+        self.str = 0.35
+        self.df = 0.35
+        self.speed = 0.1
+
+
+# Old Woman
+class Old_Woman:
+    def __init__(self):
+        self.str = 0.25
+        self.df = 0.25
+        self.speed = 0.05
+
+
+# Kid
+class Kid:
+    def __init__(self):
+        self.str = 0.3
+        self.df = 0.3
+        self.speed = 1.5
+
+
+# Homeowner
+class Homeowner:
+    def __init__(self):
+        self.str = 1
+        self.df = 1
+        self.speed = 1
+
+
+# Dog
+class Dog:
+    def __init__(self):
+        self.str = 1.75
+        self.df = 0.75
+        self.speed = 2.25
+
+
+# Cat
+class Cat:
+    def __init__(self):
+        self.str = 1.5
+        self.df = 0.666
+        self.speed = 2.69
+
+
+# Goldfish
+class Goldfish:
+    def __init__(self):
+        self.str = 0
+        self.df = 0.01
+        self.speed = 1
+
+
+
+# Enemies END--------------------------------------------------------------------------------

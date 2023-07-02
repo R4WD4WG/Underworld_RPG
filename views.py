@@ -51,7 +51,7 @@ class GameWindow:
     # BUTTONS ------------------------------------------------------------------------------
     # Disable Button Function
     def disable_button(self, btn):
-        btn.config(state='disabled')
+        btn.config(state='disabled', text='')
 
 
     # Basic Message Function
@@ -73,7 +73,7 @@ class GameWindow:
 
 
 
-    # Button 1 / Function 1 - UNDER CONSTRUCTION
+    # Button 1 / Function 1 - mostly under look_around() function - to avoid clutter in default buttons
     # Inspect Nearby Area
     def inspect_nearby(self):
         self.look_around()
@@ -189,12 +189,13 @@ class GameWindow:
 
     # *** INSPECTS ***
 
-    # Undercity Start Inspect
+    # Undercity Start Inspect - UNDER CONSTRUCTION
     def undercity_start(self):
         self.msg('')
         self.msg('You are standing in a market. The market is moderately busy, with a small crowd around the stalls.')
         self.msg('Besides the stalls stands an Inn & an Equipment Store.')
         self.msg('What would you like to do?')
+
         self.buttons[0].config(text='Market Stalls', command=self.undercity_start_stalls)
         self.buttons[1].config(text='Visit the Inn', command=self.undercity_start_inn)
         self.buttons[2].config(text='Shop for Equipment', command=self.undercity_start_equip_shop)
@@ -203,18 +204,91 @@ class GameWindow:
             self.disable_button(button)
 
 
-    # Undercity Start - Market Stalls
+    # Undercity Start - Market Stalls - UNDER CONSTRUCTION
     def undercity_start_stalls(self):
+
+
+        # Pastry Stall - UNDER CONSTRUCTION
+        def pastry_stall(self):
+            self.msg('')
+            self.msg('You approach the pastry stall. An aroma of delicious baked sweets fills your nostrils.')
+            self.msg("You see a husky man behind the stall, wearing a white chef's hat and an apron.")
+            self.msg('There are three individuals browsing and asking questions.')
+            self.msg('1. An older dwarf with a long beard.')
+            self.msg('2. A young kid, appears to be working the stall with the chef.')
+            self.msg('3. An older woman, slowly browsing fruit & inspecting each piece with her poor vision.')
+            self.msg('What do you wish to do?')
+
+
+        # Sketchy Merchant - UNDER CONSTRUCTION
+        def sketchy_merchant(self):
+            # Buy from the Fence - UNDER CONSTRUCTION
+            def fence_buy(self):
+                self.msg('')
+                self.msg('For Sale:')
+                self.msg('1. Steel dagger - $35')
+                self.msg('2. Rusty, old revolver - $25')
+                self.msg('3. Lotto ticket - $1')
+                self.msg('4. Muddy Work Boots - $10')
+                self.msg('5. Kid-sized Pokemon T-shirt - $15')
+                self.msg('6. Crusty old porno mag - $5')
+
+                self.buttons[0].config(text='Steel Dagger')
+                self.buttons[1].config(text='Old Revolver')
+                self.buttons[2].config(text='Lotto Ticket')
+                self.buttons[3].config('Old Work Boots')
+                self.buttons[4].config('Kid T-Shirt')
+                self.buttons[5].config('Porno Mag')
+                self.buttons[6].config(text='Back', command=self.default_buttons)
+
+            # Sell to the Fence - UNDER CONSTRUCTION
+            def fence_sell(self):
+                self.msg('')
+            
+            self.msg('')
+            self.msg('You approach the sketchy looking merchant. He nods at you as you approach.')
+            self.msg('You look down to see expensive goods with marked down prices.')
+            self.msg('You give a puzzled look. The merchant chuckles to himself, ')
+            self.msg('"Something Wrong", he asks. You glance up from the goods and question the prices.')
+            self.msg('The merchant looks back at you with a concerned look.')
+            self.msg('"Look guy, it should be quite obvious what my operation here is, kapeesh?"')
+            self.msg('"Now look, either buy something or scram! I don\'t need the police looking over!."')
+            self.msg('1. Buy')
+            self.msg('2. Sell')
+            self.msg('What do you wish to do?')
+            
+            self.buttons[0].config(text='Buy', command=fence_buy)
+            self.buttons[1].config(text='Sell', command=fence_sell)
+            self.buttons[2].config(text='Back', command=self.default_buttons)
+            for button in self.buttons[3:7]:
+                self.disable_button(button)
+
+
+        # Jester & Crowd - UNDER CONSTRUCTION
+        def jester(self):
+            self.msg('')
+
         self.msg('')
-        self.msg('You visit the market stalls. You ')
+        self.msg('You visit the market stalls. You see a couple stalls.')
+        self.msg('1. A pastry stall with a few people browsing.')
+        self.msg('2. A sketchy looking merchant, no shoppers.')
+        self.msg('3. Also, a crowd gathering around a jester.')
+        self.msg('What do you wish to do?')
 
+        self.buttons[0].config(text='Pastry Stall', command=pastry_stall)
+        self.buttons[1].config(text='"Interesting" Merchant', command=sketchy_merchant)
+        self.buttons[2].config(text='The Jester?', command=jester)
+        self.buttons[3].config(text='Back', command=self.default_buttons)
+        for button in self.buttons[4:7]:
+            self.disable_button(button)
 
-    # Undercity Start - Inn
+        
+    # Undercity Start - Inn - UNDER CONSTRUCTION
     def undercity_start_inn(self):
         self.msg('')
 
 
-    # Undercity Start - Equipment Shop
+    # Undercity Start - Equipment Shop - UNDER CONSTRUCTION
     def undercity_start_equip_shop(self):
         self.msg('')
 
