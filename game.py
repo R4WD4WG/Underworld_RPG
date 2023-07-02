@@ -172,21 +172,7 @@ class Player:
             'Undercity_Start_East', # 3 Start --> East (UNDER CONSTRUCTION)
             'Undercity_Start_West', # 4 Start --> West (UNDER CONSTRUCTION)
 
-
         ]
-
-
-        # Location Groups
-        self.travel_options = {
-            # Undercity Start
-            self.locations[0]:{
-                'North': self.locations[1],
-                'South': self.locations[2],
-                'East': self.locations[3],
-                'West': self.locations[4],
-            },
-            
-        }
 
     
 # Player End---------------------------------------------------------------------------------        
@@ -257,17 +243,13 @@ class GameWindow:
     # Button 1 / Function 1 - UNDER CONSTRUCTION
     # Inspect Nearby Area
     def inspect_nearby(self):
-        pass
+        self.look_around()
 
 
     # Button 2 / Function 2 - UNDER CONSTRUCTION
     # Travel Close
     def travel_close(self):
-        travel_inspections = {
-            self.player.locations[0],[
-                ''
-            ]
-        }
+        pass
 
 
     # Button 3 / Function 3 - UNDER CONSTRUCTION
@@ -351,6 +333,31 @@ class GameWindow:
             pass
 
     # BUTTONS END -----------------------------------------------------------------------------
+
+
+
+    # TRAVEL COMMANDS -------------------------------------------------------------------------
+
+
+    # Look around function (Inspect Nearby Start)
+    def look_around(self):
+        # Undercity Start
+        if self.player.loc == 'Undercity_Start':
+            self.undercity_start()
+        elif self.player.loc == 'Undercity_Start_North':
+            pass
+        elif self.player.loc == 'Undercity_Start_South':
+            pass
+        elif self.player.loc == 'Undercity_Start_East':
+            pass
+        elif self.player.loc == 'Undercity_Start_West':
+            pass
+
+
+    def undercity_start(self):
+        self.msg('')
+        self.msg('test')
+
 
 
     # New Game Screen-------------------------------------------------------------------------
